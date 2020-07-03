@@ -10,18 +10,7 @@
 - has_many :group_users
 - has_many :message
 
-## posts テーブル
-|Column|Type|Options|
-|------|----|-------|
-|title|text|null: false|
-|text|text|null: false|
-|user_id|integer|null: false, foreigh_key: true|
-### Association
-- belongs_to :user
-- has_many :message
-- has_many :group_users
-- has_many :group,  through:  :group_users
-
+ 
 ## group テーブル
 |Column|Type|Options|
 |------|----|-------|
