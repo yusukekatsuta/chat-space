@@ -8,6 +8,7 @@
 |password|string|null: false|
 ### Association
 - has_many :group_users
+- has_many :group_users, through:  :group
 - has_many :message
 
  
@@ -17,7 +18,8 @@
 |name|string|null: false|
 ### Association
 - has_many :group_users
-- has_many :message, through:  :group_users
+- has_many :group_user, through:  :users
+- has_many :message
 
 ## massage テーブル
 |Column|Type|Options|
