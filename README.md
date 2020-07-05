@@ -6,29 +6,25 @@
 |name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
-|group_id|integer|null: false, foreign_key: true|
-|message_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :group_users
-- has_many :group_users, through:  :group
+- has_many :group, through:  :group＿users
+- has_many :messages
 
- 
 ## group テーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|message_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :group_users
-- has_many :group_user, through:  :users
-- has_many :message
+- has_many :users, through:  :group_users
+- has_many :messages
 
 ## massage テーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
-|image|string|null: false|
+|body|text||
+|image|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
