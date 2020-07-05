@@ -6,16 +6,19 @@
 |name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
+|group_id|integer|null: false, foreign_key: true|
+|message_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :group_users
 - has_many :group_users, through:  :group
-- has_many :message
 
  
 ## group テーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|message_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :group_users
 - has_many :group_user, through:  :users
