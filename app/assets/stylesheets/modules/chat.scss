@@ -69,11 +69,14 @@
     box-sizing: border-box;
     height: 90px;
     padding: 20px 50px 20px 40px;
+    position: relative;
     &__message {
       border: none;
       float: left;
       height: 50px;
       width: calc(100% - 150px);
+      padding-left: 10px;
+      
     }
     &__mask {
       background-color: $white;
@@ -83,6 +86,9 @@
       &__image {
         font-size: 20px;
         line-height: 50px;
+        position: absolute;
+        right: 205px;
+        bottom: 35px;
       }
       .hidden {
         display: none;
